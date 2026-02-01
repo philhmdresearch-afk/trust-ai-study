@@ -149,6 +149,7 @@ class DataManager {
             'T1_STIAS_1', 'T1_STIAS_2', 'T1_STIAS_3',
             // Task 1 - Single items
             'T1_Usefulness', 'T1_Satisfaction',
+            'T1_Usefulness_Reason', 'T1_Satisfaction_Reason',
             // Task 2
             'Task2_Type', 'Task2_ID', 'Task2_Start', 'Task2_End', 'Task2_Duration_Min',
             // Task 2 - Functional Trust (10 items)
@@ -161,6 +162,7 @@ class DataManager {
             'T2_STIAS_1', 'T2_STIAS_2', 'T2_STIAS_3',
             // Task 2 - Single items
             'T2_Usefulness', 'T2_Satisfaction',
+            'T2_Usefulness_Reason', 'T2_Satisfaction_Reason',
             // Demographics
             'Role', 'Age', 'Gender', 'Education',
             // AI Experience
@@ -199,6 +201,8 @@ class DataManager {
             ...this.extractScaleValues(d.task1, 'stias', 3),
             d.task1.scales?.singleItems?.usefulness || '',
             d.task1.scales?.singleItems?.satisfaction || '',
+            this.escapeCSV(d.task1.scales?.singleItems?.usefulness_reason || ''),
+            this.escapeCSV(d.task1.scales?.singleItems?.satisfaction_reason || ''),
             // Task 2
             d.task2.type || '',
             d.task2.taskId || '',
@@ -211,6 +215,8 @@ class DataManager {
             ...this.extractScaleValues(d.task2, 'stias', 3),
             d.task2.scales?.singleItems?.usefulness || '',
             d.task2.scales?.singleItems?.satisfaction || '',
+            this.escapeCSV(d.task2.scales?.singleItems?.usefulness_reason || ''),
+            this.escapeCSV(d.task2.scales?.singleItems?.satisfaction_reason || ''),
             // Demographics
             this.escapeCSV(d.background?.role || ''),
             d.background?.age || '',
