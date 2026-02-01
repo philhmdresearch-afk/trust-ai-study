@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+.checkbox-group {
+    margin: 20px 0;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.task-box {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 4px solid #3498db;
+}
+
+.agent-info {
+    background-color: #e8f4f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 4px solid #3498db;
+}
+
+.reminder-box {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 4px solid #ffc107;
+}
+
+.scale-item {
+    margin: 25px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.scale-item p {
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.likert-scale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.likert-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.likert-option input[type="radio"] {
+    margin-bottom: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.likert-option label {
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.upload-area {
+    border: 2px dashed #3498db;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.upload-area input[type="file"] {
+    display: none;
+}
+
+.upload-label {
+    cursor: pointer;
+    color: #3498db;
+    font-weight: 500;
+}
+
+.upload-label:hover {
+    text-decoration: underline;
+}
+
+.file-preview {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e8f4f8;
+    border-radius: 4px;
+}
+
+.file-preview img {
+    max-width: 100%;
+    max-height: 300px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.error-message {
+    background-color: #fee;
+    color: #c33;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 4px solid #c33;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 4px solid #28a745;
+}
+
+.hidden {
+    display: none;
+}
+
+.section-divider {
+    border-top: 2px solid #ecf0f1;
+    margin: 30px 0;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.scale-header {
+    background-color: #34495e;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 30px 0 20px 0;
+}
+
+.scale-header h3 {
+    color: white;
+    margin: 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Response Matrix Styles */
+.response-matrix {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.matrix-table thead {
+    background-color: #34495e;
+    color: white;
+}
+
+.matrix-table th {
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+.matrix-table th.statement-col {
+    text-align: left;
+    min-width: 300px;
+    width: 40%;
+}
+
+.matrix-table th.scale-col {
+    min-width: 80px;
+    width: 8.5%;
+}
+
+.scale-label {
+    font-size: 11px;
+    font-weight: normal;
+    display: block;
+    margin-top: 4px;
+}
+
+.matrix-table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.matrix-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.matrix-table tbody tr:hover {
+    background-color: #e8f4f8;
+}
+
+.statement-cell {
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+    color: #2c3e50;
+    border: 1px solid #ddd;
+}
+
+.radio-cell {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.radio-cell input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.radio-cell .radio-label {
+    display: none;
+}
+
+/* Drag and Drop Upload Styles */
+.upload-area.drag-over {
+    background-color: #e8f4f8;
+    border-color: #2980b9;
+}
+
+.screenshot-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.screenshot-preview-item {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.screenshot-preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.screenshot-remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0;
+}
+
+.screenshot-remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.screenshot-count {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .likert-scale {
+        flex-direction: column;
+    }
+    
+    .likert-option {
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+    
+    .likert-option input[type="radio"] {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+}
+
+/* Made with Bob */
+
+
+/* Semantic Differential Scale Styles */
+.semantic-diff-table .pole-col {
+    width: 15%;
+    text-align: center;
+    font-weight: 500;
+    padding: 12px 8px;
+}
+
+.semantic-diff-table .scale-col-sd {
+    width: 10%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pole-cell {
+    padding: 15px 12px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.left-pole-cell {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.right-pole-cell {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.radio-cell-sd {
+    padding: 10px 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.radio-cell-sd input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.radio-label-sd {
+    display: none;
+}
+
+/* Highlight middle column (neutral point) */
+.semantic-diff-table tbody tr td:nth-child(5) {
+    background-color: #f0f0f0;
+}
