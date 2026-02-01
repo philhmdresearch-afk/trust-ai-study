@@ -650,16 +650,7 @@ class Experiment {
                     <li><strong>Details:</strong> ${instruction.details}</li>
                 </ol>
                 
-                <div class="reminder-box" style="margin-top: 15px;">
-                    <strong>Visual Guide:</strong>
-                    <ul>
-                        <li><strong>ChatGPT:</strong> Sidebar → "New chat" (top-left)</li>
-                        <li><strong>Claude:</strong> Top bar → "+" or "New chat" button</li>
-                        <li><strong>Gemini:</strong> Top navigation → "New chat" button</li>
-                        <li><strong>Copilot:</strong> Top-right → "New topic" or broom icon</li>
-                    </ul>
-                    <p style="margin-top: 10px;"><em>If you can't find the button, try refreshing the page or opening ${data.assignedAgent.name} in a new tab.</em></p>
-                </div>
+                <p style="margin-top: 15px;"><em>If you can't find the button, try refreshing the page or opening ${data.assignedAgent.name} in a new tab.</em></p>
             </div>
             
             <p>Once you've cleared your chat and started fresh, click below to start Task 2.</p>
